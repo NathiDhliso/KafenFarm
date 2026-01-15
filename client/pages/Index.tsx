@@ -1,0 +1,161 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import Hero from "@/components/Hero";
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
+import { usePageMeta } from "@/hooks/use-page-meta";
+import { staggerContainer, fadeInUp } from "@/lib/animation-variants";
+
+function PathCard({
+  title,
+  description,
+  href,
+  image,
+  note,
+}: {
+  title: string;
+  description: string;
+  href: string;
+  image: string;
+  note?: string;
+}) {
+  return (
+    <motion.div
+      variants={fadeInUp}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.3 }}
+      className="group"
+    >
+      <Link to={href} className="block rounded-2xl overflow-hidden border bg-card shadow-card">
+        <div className="relative aspect-[16/10] overflow-hidden">
+          <img src={image} alt={title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          {note && (
+            <div className="absolute bottom-2 right-3 rounded-full bg-black/30 px-3 py-1 text-white/90 text-sm italic">
+              {note}
+            </div>
+          )}
+          <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+            <h3 className="text-xl md:text-2xl font-semibold drop-shadow">{title}</h3>
+            <p className="mt-1 text-white/90 text-sm md:text-base line-clamp-2">{description}</p>
+          </div>
+        </div>
+      </Link>
+    </motion.div>
+  );
+}
+
+export default function Index() {
+  usePageMeta({
+    title: "Kafen Farm | Farm Resort, Lodge & Venue in Johannesburg South",
+    description: "Experience Kafen Farm, a beautiful farm resort and lodge in Elandsfontein, next to Lawley. We cater to all age groups for events, getaways, hiking, and family fun.",
+    keywords: "Kafen Farm, farm resort Johannesburg South, lodge near Lawley, event venues Elandsfontein, Kafen Farm bookings, party venues Joburg South, resort in Lawley, hiking trails near Lawley, family activities Johannesburg South",
+  });
+
+  const testimonials = [
+    {
+      quote: "A magical place — our graduation photos were perfect and the team were so helpful.",
+      author: "Naledi S.",
+      event: "Birthday Celebration",
+    },
+    {
+      quote: "We had the best family day out. The trails and picnic spots are beautiful.",
+      author: "Thabo M.",
+      event: "Family Day",
+    },
+    {
+      quote: "Wonderful venue for our company retreat — relaxed, private and scenic.",
+      author: "Sibongile K.",
+      event: "Corporate Retreat",
+    },
+  ];
+
+  return (
+    <main>
+      <Hero />
+
+      <section className="container py-12 md:py-16">
+        <div className="max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-serif tracking-wide">Find Your Path</h2>
+          <p className="mt-3 text-muted-foreground">
+            Whether you’re hosting a milestone or seeking a relaxed family day, start
+            here.
+          </p>
+        </div>
+
+        <motion.div
+          className="mt-8 grid gap-6 md:grid-cols-3"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+        >
+          <PathCard
+            title="Host an Event"
+            description="Graduations, birthdays, showers and more. Beautiful spaces that feel special and welcoming."
+            href="/event-plan"
+            image="https://images.unsplash.com/photo-1521334884684-d80222895322?q=80&w=1400&auto=format&fit=crop"
+            note="The Celebration Lawn"
+          />
+          <PathCard
+            title="Family Day Out"
+            description="Pack a picnic, play lawn games, wander the trails. Fresh air and golden light."
+            href="/activities"
+            image="https://images.unsplash.com/photo-1505480848463-a104c95f3e56?q=80&w=1400&auto=format&fit=crop"
+            note="West Ridge Picnic"
+          />
+          <PathCard
+            title="Our Activities"
+            description="Hiking, picnic spots, lawn games and more. See what’s open and plan your flow."
+            href="/activities"
+            image="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1400&auto=format&fit=crop"
+            note="Trail Head"
+          />
+        </motion.div>
+
+        <div className="mt-10">
+          <Button asChild size="lg">
+            <Link to="/event-plan">Enquire Now</Link>
+          </Button>
+        </div>
+      </section>
+
+      <section className="relative">
+        <div className="container py-12 md:py-16 grid gap-8 md:grid-cols-2 items-center">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-serif tracking-wide">A Place to Breathe</h2>
+            <p className="mt-3 text-muted-foreground">
+              Light, air, and warmth shape every corner. Subtle textures and organic
+              lines keep the experience human and joyful.
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden border shadow-card">
+            <img
+              src="https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=1400&auto=format&fit=crop"
+              alt="Warm-toned gallery with ambient hover details"
+              className="h-64 w-full object-cover"
+            />
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-secondary text-secondary-foreground py-12">
+        <div className="container">
+          <h3 className="text-2xl font-serif">What Our Guests Are Saying</h3>
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <Card key={t.author} className="p-6">
+                <blockquote className="text-lg text-foreground">“{t.quote}”</blockquote>
+                <footer className="mt-4 text-sm text-secondary-foreground/90">
+                  <strong>{t.author}</strong> — <span className="text-sm">{t.event}</span>
+                </footer>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
