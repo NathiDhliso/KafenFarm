@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
+import { MessageCircle } from "lucide-react";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -71,7 +72,31 @@ export default function Contact() {
       <section className="container py-12 md:py-16">
         <h1 className="text-3xl md:text-4xl font-serif">Get in Touch</h1>
         <p className="mt-3 text-muted-foreground max-w-2xl">Questions about bookings, events or availability? Send us a message and we’ll get back to you.</p>
+        <div className="mt-6 flex flex-wrap gap-4">
+          <a
+            href="https://wa.me/27681405792?text=Hi%20Kafen%20Farm,%20I'd%20like%20to%20enquire%20about..."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-white font-semibold shadow-card hover:bg-[#22c55e] transition-colors"
+          >
+            <MessageCircle className="h-5 w-5" />
+            Chat on WhatsApp
+          </a>
+          <a
+            href="tel:+27681405792"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-foreground font-semibold hover:bg-muted transition-colors"
+          >
+            Call 068 140 5792
+          </a>
+        </div>
 
+        <div className="mt-8 mb-6">
+          <div className="flex items-center gap-3">
+            <div className="h-px flex-1 bg-border" />
+            <span className="text-sm text-muted-foreground">Or fill in the form below</span>
+            <div className="h-px flex-1 bg-border" />
+          </div>
+        </div>
         <div className="mt-8 grid gap-8 md:grid-cols-2">
           <form onSubmit={onSubmit} className="grid gap-4">
             <div aria-live="polite" className="text-sm">
@@ -150,8 +175,20 @@ export default function Contact() {
             <div className="mt-6 rounded-xl border bg-card p-6 shadow-card">
               <h3 className="text-lg font-semibold">Visit Us</h3>
               <p className="mt-2 text-muted-foreground">Dalmore Rd, Elandsfontein 308IQ (next to Lawley), Johannesburg South</p>
-              <p className="mt-2 text-muted-foreground">Phone: 068 140 5792</p>
-              <p className="mt-2 text-muted-foreground">Email: hello@kafenfarm.co.za</p>
+              <div className="mt-4 space-y-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-semibold text-foreground">Phone:</span>
+                  <a href="tel:+27681405792" className="text-sm text-primary hover:underline">068 140 5792</a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-semibold text-foreground">Email:</span>
+                  <a href="mailto:hello@kafenfarm.co.za" className="text-sm text-primary hover:underline">hello@kafenfarm.co.za</a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-semibold text-foreground">WhatsApp:</span>
+                  <a href="https://wa.me/27681405792" target="_blank" rel="noopener noreferrer" className="text-sm text-[#25D366] hover:underline">Message us</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

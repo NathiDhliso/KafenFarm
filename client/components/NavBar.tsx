@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Logo from "@/components/Logo";
 
@@ -130,6 +130,17 @@ export default function NavBar() {
               </div>
             </SheetContent>
           </Sheet>
+          
+          <a
+            href="https://wa.me/27681405792?text=Hi%20Kafen%20Farm,%20I'd%20like%20to%20enquire%20about..."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-white font-semibold text-sm hover:bg-[#22c55e] transition-colors shadow-sm"
+            aria-label="Chat on WhatsApp"
+          >
+            <MessageCircle className="h-4 w-4" />
+            WhatsApp
+          </a>
           
           <Button asChild className="hidden md:inline-flex">
             <Link to="/event-plan">Enquire Now</Link>
