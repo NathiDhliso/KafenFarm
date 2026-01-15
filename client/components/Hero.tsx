@@ -41,6 +41,11 @@ export default function Hero() {
           ref={imgRef}
           src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1920&auto=format&fit=crop"
           alt="Golden-hour fields and joyful gathering"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          srcSet="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=768&auto=format&fit=crop 768w, https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop 1200w, https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1920&auto=format&fit=crop 1920w"
+          sizes="100vw"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
@@ -63,7 +68,7 @@ export default function Hero() {
             <p className="text-sm uppercase tracking-wider text-white/80">Kafen Farm</p>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-semibold text-white leading-tight drop-shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
+          <h1 className="text-[48px] md:text-[56px] font-semibold text-white leading-tight drop-shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
             Your Escape in the South. Celebrate, Relax, Play.
           </h1>
           <p className="mt-5 text-lg md:text-xl text-white/90 max-w-2xl">

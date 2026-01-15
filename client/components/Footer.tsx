@@ -21,6 +21,8 @@ export default function Footer() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fffbdffacfb9e45418bd2a8c1820c180d%2Fa04b37d7c29c4515894f59e026bebccc?format=webp&width=300"
               alt="Kafen Farm logo"
+              loading="lazy"
+              decoding="async"
               className="h-12 w-12 rounded-sm object-cover"
             />
             <div>

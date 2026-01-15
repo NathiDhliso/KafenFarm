@@ -19,17 +19,27 @@ export default function Activities() {
           <img
             src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop"
             alt="Hiking trails at golden hour"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            srcSet="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=768&auto=format&fit=crop 768w, https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop 1200w, https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop 1600w"
+            sizes="100vw"
             className="w-full h-72 md:h-96 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/40" />
         </div>
         <div className="container py-20 md:py-28">
-          <h1 className="text-white text-4xl md:text-5xl font-semibold">Our Activities</h1>
+          <h1 className="text-white text-[48px] md:text-[56px] font-semibold leading-tight">Our Activities</h1>
           <p className="text-white/90 max-w-2xl mt-4">
             Hiking, picnic spots and more. Explore joyful experiences for families and friends across Kafen Farm — including hiking trails near Lawley, family-friendly picnic lawns, a seasonal farmers market with food stalls, and a swimming pool for warm days.
           </p>
         </div>
       </section>
+
+      <div className="sr-only" id="trails">Trails and hiking information</div>
+      <div className="sr-only" id="pool">Swimming pool details</div>
+      <div className="sr-only" id="market">Farmers market details</div>
+      <div className="sr-only" id="picnic">Picnic area details</div>
 
       <motion.section
         className="container py-14 md:py-20 grid gap-10 md:grid-cols-3"

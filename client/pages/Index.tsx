@@ -29,7 +29,15 @@ function PathCard({
     >
       <Link to={href} className="block rounded-2xl overflow-hidden border bg-card shadow-card">
         <div className="relative aspect-[16/10] overflow-hidden">
-          <img src={image} alt={title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img
+                src={image}
+                alt={`${title} at Kafen Farm${note ? ` — ${note}` : ""}`}
+                loading="lazy"
+                decoding="async"
+                srcSet={`${image}&w=480 480w, ${image}&w=768 768w, ${image}&w=1200 1200w`}
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
           {note && (
             <div className="absolute bottom-2 right-3 rounded-full bg-black/30 px-3 py-1 text-white/90 text-sm italic">
@@ -77,7 +85,7 @@ export default function Index() {
 
       <section className="container py-12 md:py-16">
         <div className="max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-serif tracking-wide">Find Your Path</h2>
+          <h2 className="text-[32px] md:text-[36px] font-serif tracking-wide">Find Your Path</h2>
           <p className="mt-3 text-muted-foreground">
             Whether you’re hosting a milestone or seeking a relaxed family day, start
             here.
@@ -124,7 +132,7 @@ export default function Index() {
       <section className="relative">
         <div className="container py-12 md:py-16 grid gap-8 md:grid-cols-2 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-serif tracking-wide">A Place to Breathe</h2>
+            <h2 className="text-[32px] md:text-[36px] font-serif tracking-wide">A Place to Breathe</h2>
             <p className="mt-3 text-muted-foreground">
               Light, air, and warmth shape every corner. Subtle textures and organic
               lines keep the experience human and joyful.
@@ -134,6 +142,10 @@ export default function Index() {
             <img
               src="https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=1400&auto=format&fit=crop"
               alt="Warm-toned gallery with ambient hover details"
+              loading="lazy"
+              decoding="async"
+              srcSet="https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=1024&auto=format&fit=crop 1024w, https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=1400&auto=format&fit=crop 1400w"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="h-64 w-full object-cover"
             />
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -141,14 +153,14 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="bg-secondary text-secondary-foreground py-12">
+      <section className="bg-muted text-foreground py-12">
         <div className="container">
           <h3 className="text-2xl font-serif">What Our Guests Are Saying</h3>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
             {testimonials.map((t) => (
               <Card key={t.author} className="p-6">
                 <blockquote className="text-lg text-foreground">“{t.quote}”</blockquote>
-                <footer className="mt-4 text-sm text-secondary-foreground/90">
+                <footer className="mt-4 text-sm text-muted-foreground">
                   <strong>{t.author}</strong> — <span className="text-sm">{t.event}</span>
                 </footer>
               </Card>

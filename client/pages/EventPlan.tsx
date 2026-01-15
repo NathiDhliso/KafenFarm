@@ -80,7 +80,8 @@ export default function EventPlan() {
   return (
     <main>
       <section className="container py-12 md:py-16">
-        <h1 className="text-3xl md:text-4xl font-semibold font-serif tracking-wide">Plan Your Perfect Day</h1>
+        <div className="sr-only" id="celebration">Celebration lawn and event spaces</div>
+        <h1 className="text-[40px] md:text-[48px] font-semibold font-serif tracking-wide leading-tight">Plan Your Perfect Day</h1>
         <p className="mt-3 text-muted-foreground max-w-2xl">
           Tell us how you want it to feel. We’ll guide you to spaces and activities
           that match your style.
