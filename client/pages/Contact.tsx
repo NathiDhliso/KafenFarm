@@ -6,6 +6,7 @@ import { toast } from "@/hooks/use-toast";
 export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState<{ type: "success" | "error"; message: string } | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {

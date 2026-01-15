@@ -36,11 +36,6 @@ export default function Activities() {
         </div>
       </section>
 
-      <div className="sr-only" id="trails">Trails and hiking information</div>
-      <div className="sr-only" id="pool">Swimming pool details</div>
-      <div className="sr-only" id="market">Farmers market details</div>
-      <div className="sr-only" id="picnic">Picnic area details</div>
-
       <motion.section
         className="container py-14 md:py-20 grid gap-10 md:grid-cols-3"
         variants={staggerContainer}
@@ -98,6 +93,52 @@ export default function Activities() {
           </p>
         </motion.div>
       </motion.section>
+
+      <section className="container py-12 space-y-12">
+        <div id="trails" className="grid gap-6 md:grid-cols-2 items-center">
+          <div>
+            <h3 className="text-xl font-bold mb-3">Trail Head & Hiking</h3>
+            <p className="text-muted-foreground">Our scenic loop trail is perfect for families and beginners. The well-maintained path offers beautiful views and photo opportunities, with gentle terrain suitable for all fitness levels. Trail markers guide you through native vegetation areas.</p>
+          </div>
+          <div className="rounded-xl overflow-hidden border shadow-card">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800&auto=format&fit=crop" alt="Hiking trail through native vegetation" loading="lazy" className="h-48 w-full object-cover" />
+          </div>
+        </div>
+
+        <div id="pool" className="grid gap-6 md:grid-cols-2 items-center">
+          <div className="order-2 md:order-1">
+            <div className="rounded-xl overflow-hidden border shadow-card">
+              <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=800&auto=format&fit=crop" alt="Family-friendly swimming pool area" loading="lazy" className="h-48 w-full object-cover" />
+            </div>
+          </div>
+          <div className="order-1 md:order-2">
+            <h3 className="text-xl font-bold mb-3">Swimming Pool</h3>
+            <p className="text-muted-foreground">Our family-friendly pool area is open seasonally during warm months. The pool features shallow and deep sections, with poolside seating areas. Changing rooms and restroom facilities are available nearby. Lifeguard supervision may be provided during busy periods.</p>
+          </div>
+        </div>
+
+        <div id="market" className="grid gap-6 md:grid-cols-2 items-center">
+          <div>
+            <h3 className="text-xl font-bold mb-3">Farmers Market & Food Stalls</h3>
+            <p className="text-muted-foreground">Our seasonal farmers market features local producers offering fresh produce, artisanal baked goods, and prepared foods. Browse unique items from regional vendors, enjoy casual dining options, and discover local flavors in a relaxed outdoor setting.</p>
+          </div>
+          <div className="rounded-xl overflow-hidden border shadow-card">
+            <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=800&auto=format&fit=crop" alt="Local farmers market with fresh produce and food stalls" loading="lazy" className="h-48 w-full object-cover" />
+          </div>
+        </div>
+
+        <div id="picnic" className="grid gap-6 md:grid-cols-2 items-center">
+          <div className="order-2 md:order-1">
+            <div className="rounded-xl overflow-hidden border shadow-card">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt="Peaceful picnic area under acacia trees" loading="lazy" className="h-48 w-full object-cover" />
+            </div>
+          </div>
+          <div className="order-1 md:order-2">
+            <h3 className="text-xl font-bold mb-3">West Ridge Picnic Spots</h3>
+            <p className="text-muted-foreground">Quiet picnic areas scattered across our west ridge offer stunning golden-hour views. These peaceful spots under mature acacia trees provide natural shade and scenic backgrounds. Bring your own blanket and enjoy the tranquil farm atmosphere.</p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

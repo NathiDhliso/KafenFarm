@@ -80,7 +80,6 @@ export default function EventPlan() {
   return (
     <main>
       <section className="container py-12 md:py-16">
-        <div className="sr-only" id="celebration">Celebration lawn and event spaces</div>
         <h1 className="text-[40px] md:text-[48px] font-semibold font-serif tracking-wide leading-tight">Plan Your Perfect Day</h1>
         <p className="mt-3 text-muted-foreground max-w-2xl">
           Tell us how you want it to feel. We’ll guide you to spaces and activities
@@ -190,6 +189,24 @@ export default function EventPlan() {
               Make a few selections above to see suggestions tailored to you.
             </p>
           )}
+        </div>
+      </section>
+
+      <section className="container py-12">
+        <div id="celebration" className="grid gap-8 md:grid-cols-2 items-center">
+          <div>
+            <h2 className="text-[32px] md:text-[36px] font-serif tracking-wide mb-4">The Celebration Lawn</h2>
+            <p className="text-muted-foreground mb-4">Our spacious celebration lawn provides the perfect backdrop for graduations, birthdays, baby showers, and other special occasions. This open-air venue offers flexibility for various event layouts while maintaining the natural beauty of the farm setting.</p>
+            <p className="text-muted-foreground">We provide event logistics support, tables and seating arrangements, and can accommodate photography sessions. The lawn connects to sheltered marquee areas for weather contingencies.</p>
+          </div>
+          <div className="rounded-xl overflow-hidden border shadow-card">
+            <img 
+              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop" 
+              alt="Spacious celebration lawn set up for outdoor event" 
+              loading="lazy" 
+              className="h-64 w-full object-cover" 
+            />
+          </div>
         </div>
       </section>
     </main>
