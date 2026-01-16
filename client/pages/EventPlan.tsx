@@ -200,11 +200,11 @@ export default function EventPlan() {
             <p className="text-muted-foreground">We provide event logistics support, tables and seating arrangements, and can accommodate photography sessions. The lawn connects to sheltered marquee areas for weather contingencies.</p>
           </div>
           <div className="rounded-xl overflow-hidden border shadow-card">
-            <img 
-              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop" 
-              alt="Spacious celebration lawn set up for outdoor event" 
-              loading="lazy" 
-              className="h-64 w-full object-cover" 
+            <img
+              src="/KafenFarmPics/KafenFarm_Formal_Dinner_001.jpeg"
+              alt="Spacious celebration lawn set up for outdoor event"
+              loading="lazy"
+              className="h-64 w-full object-cover"
             />
           </div>
         </div>

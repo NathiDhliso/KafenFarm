@@ -17,13 +17,11 @@ export default function Activities() {
       <section className="relative">
         <div className="absolute inset-0 -z-10">
           <img
-            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop"
+            src="/KafenFarmPics/KafenFarm_Grass_Picnic_005.jpeg"
             alt="Hiking trails at golden hour"
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
-            srcSet="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=768&auto=format&fit=crop 768w, https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop 1200w, https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop 1600w"
-            sizes="100vw"
             className="w-full h-72 md:h-96 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/40" />
@@ -101,14 +99,14 @@ export default function Activities() {
             <p className="text-muted-foreground">Our scenic loop trail is perfect for families and beginners. The well-maintained path offers beautiful views and photo opportunities, with gentle terrain suitable for all fitness levels. Trail markers guide you through native vegetation areas.</p>
           </div>
           <div className="rounded-xl overflow-hidden border shadow-card">
-            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800&auto=format&fit=crop" alt="Hiking trail through native vegetation" loading="lazy" className="h-48 w-full object-cover" />
+            <img src="/KafenFarmPics/KafenFarm_Candid_Moments_003.jpeg" alt="Hiking trail through native vegetation" loading="lazy" className="h-48 w-full object-cover" />
           </div>
         </div>
 
         <div id="pool" className="grid gap-6 md:grid-cols-2 items-center">
           <div className="order-2 md:order-1">
             <div className="rounded-xl overflow-hidden border shadow-card">
-              <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=800&auto=format&fit=crop" alt="Family-friendly swimming pool area" loading="lazy" className="h-48 w-full object-cover" />
+              <img src="/KafenFarmPics/KafenFarm_Pool_Fun_001.jpeg" alt="Family-friendly swimming pool area" loading="lazy" className="h-48 w-full object-cover" />
             </div>
           </div>
           <div className="order-1 md:order-2">
@@ -123,14 +121,14 @@ export default function Activities() {
             <p className="text-muted-foreground">Our seasonal farmers market features local producers offering fresh produce, artisanal baked goods, and prepared foods. Browse unique items from regional vendors, enjoy casual dining options, and discover local flavors in a relaxed outdoor setting.</p>
           </div>
           <div className="rounded-xl overflow-hidden border shadow-card">
-            <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=800&auto=format&fit=crop" alt="Local farmers market with fresh produce and food stalls" loading="lazy" className="h-48 w-full object-cover" />
+            <img src="/KafenFarmPics/KafenFarm_Braai_and_Prep_008.jpeg" alt="Local farmers market with fresh produce and food stalls" loading="lazy" className="h-48 w-full object-cover" />
           </div>
         </div>
 
         <div id="picnic" className="grid gap-6 md:grid-cols-2 items-center">
           <div className="order-2 md:order-1">
             <div className="rounded-xl overflow-hidden border shadow-card">
-              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt="Peaceful picnic area under acacia trees" loading="lazy" className="h-48 w-full object-cover" />
+              <img src="/KafenFarmPics/KafenFarm_Grass_Picnic_001.jpeg" alt="Peaceful picnic area under acacia trees" loading="lazy" className="h-48 w-full object-cover" />
             </div>
           </div>
           <div className="order-1 md:order-2">

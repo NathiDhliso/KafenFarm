@@ -29,15 +29,13 @@ function PathCard({
     >
       <Link to={href} className="block rounded-2xl overflow-hidden border bg-card shadow-card">
         <div className="relative aspect-[16/10] overflow-hidden">
-              <img
-                src={image}
-                alt={`${title} at Kafen Farm${note ? ` — ${note}` : ""}`}
-                loading="lazy"
-                decoding="async"
-                srcSet={`${image}&w=480 480w, ${image}&w=768 768w, ${image}&w=1200 1200w`}
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+          <img
+            src={image}
+            alt={`${title} at Kafen Farm${note ? ` — ${note}` : ""}`}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
           {note && (
             <div className="absolute bottom-2 right-3 rounded-full bg-black/30 px-3 py-1 text-white/90 text-sm italic">
@@ -103,21 +101,21 @@ export default function Index() {
             title="Host an Event"
             description="Graduations, birthdays, showers and more. Beautiful spaces that feel special and welcoming."
             href="/event-plan"
-            image="https://images.unsplash.com/photo-1521334884684-d80222895322?q=80&w=1400&auto=format&fit=crop"
+            image="/KafenFarmPics/KafenFarm_Tent_Dining_001.jpeg"
             note="The Celebration Lawn"
           />
           <PathCard
             title="Family Day Out"
             description="Pack a picnic, play lawn games, wander the trails. Fresh air and golden light."
             href="/activities"
-            image="https://images.unsplash.com/photo-1505480848463-a104c95f3e56?q=80&w=1400&auto=format&fit=crop"
+            image="/KafenFarmPics/KafenFarm_Kids_Party_003.jpeg"
             note="West Ridge Picnic"
           />
           <PathCard
             title="Our Activities"
             description="Hiking, picnic spots, lawn games and more. See what’s open and plan your flow."
             href="/activities"
-            image="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1400&auto=format&fit=crop"
+            image="/KafenFarmPics/KafenFarm_Pool_Fun_005.jpeg"
             note="Trail Head"
           />
         </motion.div>
@@ -140,12 +138,10 @@ export default function Index() {
           </div>
           <div className="relative rounded-2xl overflow-hidden border shadow-card">
             <img
-              src="https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=1400&auto=format&fit=crop"
+              src="/KafenFarmPics/KafenFarm_Candid_Moments_012.jpeg"
               alt="Warm-toned gallery with ambient hover details"
               loading="lazy"
               decoding="async"
-              srcSet="https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=1024&auto=format&fit=crop 1024w, https://images.unsplash.com/photo-1455218873509-8097305ee378?q=80&w=1400&auto=format&fit=crop 1400w"
-              sizes="(min-width: 1024px) 50vw, 100vw"
               className="h-64 w-full object-cover"
             />
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent" />
