@@ -101,21 +101,21 @@ export default function Index() {
             title="Host an Event"
             description="Graduations, birthdays, showers and more. Beautiful spaces that feel special and welcoming."
             href="/event-plan"
-            image="/KafenFarmPics/KafenFarm_Tent_Dining_001.jpeg"
+            image="/KafenFarmPics/KafenFarm_Tent_Dining_001.webp"
             note="The Celebration Lawn"
           />
           <PathCard
             title="Family Day Out"
             description="Pack a picnic, play lawn games, wander the trails. Fresh air and golden light."
             href="/activities"
-            image="/KafenFarmPics/KafenFarm_Kids_Party_003.jpeg"
+            image="/KafenFarmPics/KafenFarm_Kids_Party_003.webp"
             note="West Ridge Picnic"
           />
           <PathCard
             title="Our Activities"
             description="Hiking, picnic spots, lawn games and more. See what’s open and plan your flow."
             href="/activities"
-            image="/KafenFarmPics/KafenFarm_Pool_Fun_005.jpeg"
+            image="/KafenFarmPics/KafenFarm_Pool_Fun_005.webp"
             note="Trail Head"
           />
         </motion.div>
@@ -138,7 +138,7 @@ export default function Index() {
           </div>
           <div className="relative rounded-2xl overflow-hidden border shadow-card">
             <img
-              src="/KafenFarmPics/KafenFarm_Candid_Moments_012.jpeg"
+              src="/KafenFarmPics/KafenFarm_Candid_Moments_012.webp"
               alt="Warm-toned gallery with ambient hover details"
               loading="lazy"
               decoding="async"

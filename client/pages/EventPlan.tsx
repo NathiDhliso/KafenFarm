@@ -201,7 +201,7 @@ export default function EventPlan() {
           </div>
           <div className="rounded-xl overflow-hidden border shadow-card">
             <img
-              src="/KafenFarmPics/KafenFarm_Formal_Dinner_001.jpeg"
+              src="/KafenFarmPics/KafenFarm_Formal_Dinner_001.webp"
               alt="Spacious celebration lawn set up for outdoor event"
               loading="lazy"
               className="h-64 w-full object-cover"
