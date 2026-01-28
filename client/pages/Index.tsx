@@ -31,6 +31,8 @@ function PathCard({
         <div className="relative aspect-[16/10] overflow-hidden">
           <img
             src={image}
+            srcSet={`${image.replace('.webp', '_mobile.webp')} 600w, ${image} 1200w`}
+            sizes="(max-width: 768px) 100vw, 33vw"
             alt={`${title} at Kafen Farm${note ? ` — ${note}` : ""}`}
             loading="lazy"
             decoding="async"
@@ -139,6 +141,8 @@ export default function Index() {
           <div className="relative rounded-2xl overflow-hidden border shadow-card">
             <img
               src="/KafenFarmPics/KafenFarm_Candid_Moments_012.webp"
+              srcSet="/KafenFarmPics/KafenFarm_Candid_Moments_012_mobile.webp 600w, /KafenFarmPics/KafenFarm_Candid_Moments_012.webp 1200w"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Warm-toned gallery with ambient hover details"
               loading="lazy"
               decoding="async"
